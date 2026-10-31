@@ -35,13 +35,18 @@ export const Navbar: React.FC<NavbarProps> = ({ theme, onToggleTheme }) => {
 
   return (
     <>
-      {/* Header stays exact same height (h-20) and styling even when scrolled */}
-      <header className="sticky top-0 z-50 h-20 w-full bg-bg/95 backdrop-blur-md border-b border-hair transition-colors duration-200">
+      {/* Header is fixed to the viewport top and remains exactly stationary when scrolled */}
+      <header className="fixed top-0 left-0 right-0 z-50 h-20 w-full bg-bg/95 backdrop-blur-md border-b border-hair transition-colors duration-200">
         <div className="container h-full flex items-center justify-between">
           
-          {/* Left: Dot Accent + Bold Name + Monospace Subtitle */}
+          {/* Left: Professional Geometric Monogram + Bold Name + Monospace Subtitle */}
           <Link to="/home" className="flex items-center gap-3 group">
-            <span className="w-2.5 h-2.5 rounded-full bg-accent animate-pulse shrink-0" />
+            <div className="w-8 h-8 rounded-lg bg-bg-2 border border-hair flex items-center justify-center shrink-0 group-hover:border-accent transition-colors shadow-sm">
+              <svg viewBox="0 0 100 100" className="w-5 h-5 text-fg">
+                <path d="M 27 68 L 27 32 L 50 53 L 73 32 L 73 68" fill="none" stroke="currentColor" strokeWidth="8" strokeLinecap="round" strokeLinejoin="round" />
+                <circle cx="50" cy="53" r="4.5" fill="#E8613C" />
+              </svg>
+            </div>
             <div className="flex flex-col">
               <span className="font-sans font-extrabold text-base sm:text-lg tracking-wider text-fg uppercase group-hover:text-accent transition-colors leading-tight">
                 MANIL GHIMIRE

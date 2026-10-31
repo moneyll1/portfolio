@@ -10,8 +10,27 @@
   <meta property="og:description" content="Selected works in AI systems, real-time backends, and practical software engineering. Kathmandu, Nepal.">
   <meta property="og:type" content="website">
 
-  <!-- Favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2214%22 fill=%22%23BA3D1D%22/><text x=%2250%22 y=%2266%22 font-size=%2252%22 fill=%22white%22 text-anchor=%22middle%22 font-family=%22Georgia,serif%22 font-weight=%22bold%22>M</text></svg>">
+  <!-- Favicon: Professional Obsidian Monogram -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%2296%22 height=%2296%22 x=%222%22 y=%222%22 rx=%2222%22 fill=%22%230C0D11%22 stroke=%22%23252834%22 stroke-width=%223.5%22/><path d=%22M 27 68 L 27 32 L 50 53 L 73 32 L 73 68%22 fill=%22none%22 stroke=%22%23FFFFFF%22 stroke-width=%227.5%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/><circle cx=%2250%22 cy=%2253%22 r=%223.5%22 fill=%22%23E8613C%22/></svg>">
+
+  <!-- Instant System Theme Initialization (prevents flash of wrong theme) -->
+  <script>
+    (function() {
+      try {
+        var saved = localStorage.getItem('mg-theme');
+        var systemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var activeTheme = saved ? saved : (systemDark ? 'dark' : 'light');
+        if (activeTheme === 'dark') {
+          document.documentElement.classList.add('dark');
+          document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      } catch (e) {}
+    })();
+  </script>
 
   <!-- Editorial & Display Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">

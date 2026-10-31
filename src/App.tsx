@@ -11,12 +11,23 @@ import { WritingPage } from './pages/WritingPage';
 import { AboutPage } from './pages/AboutPage';
 import { ContactPage } from './pages/ContactPage';
 
+const getSystemTheme = (): 'light' | 'dark' => {
+  if (
+    typeof window !== 'undefined' &&
+    window.matchMedia &&
+    window.matchMedia('(prefers-color-scheme: dark)').matches
+  ) {
+    return 'dark';
+  }
+  return 'light';
+};
+
 const AppContent: React.FC = () => {
   const { currentPath } = useRouter();
   const [theme, setTheme] = useState<'light' | 'dark'>(() => {
     const saved = localStorage.getItem('mg-theme');
     if (saved === 'dark' || saved === 'light') return saved;
-    return 'light'; // Default light canvas matching aanandmadhav.com
+    return getSystemTheme();
   });
 
   // Synchronize root class with theme
@@ -31,6 +42,20 @@ const AppContent: React.FC = () => {
     }
     localStorage.setItem('mg-theme', theme);
   }, [theme]);
+
+  // Synchronize with OS system changes if no manual override in localStorage
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    const handleSystemChange = (e: MediaQueryListEvent) => {
+      const saved = localStorage.getItem('mg-theme');
+      if (!saved) {
+        setTheme(e.matches ? 'dark' : 'light');
+      }
+    };
+
+    mediaQuery.addEventListener('change', handleSystemChange);
+    return () => mediaQuery.removeEventListener('change', handleSystemChange);
+  }, []);
 
   const toggleTheme = () => {
     setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'));
@@ -58,11 +83,11 @@ const AppContent: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-bg text-fg selection:bg-accent selection:text-white transition-colors duration-200 relative overflow-x-hidden">
+    <div className="min-h-screen flex flex-col bg-bg text-fg selection:bg-accent selection:text-white transition-colors duration-200 relative">
       <div className="ambient-glow" aria-hidden="true" />
       <Navbar theme={theme} onToggleTheme={toggleTheme} />
       
-      <main className="flex-1 relative z-10">
+      <main className="flex-1 relative z-10 pt-20">
         <AnimatePresence mode="wait">
           <motion.div
             key={currentPath}
