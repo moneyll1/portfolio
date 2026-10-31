@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — Manil Ghimire | Engineered Systems & Applied AI</title>
+  <meta name="description" content="Technical project catalog by Manil Ghimire: Real-time multiplayer systems, RAG document search, offline LLM inference, speech synthesis, and full-stack software.">
+  <meta name="author" content="Manil Ghimire">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2214%22 fill=%22%23BA3D1D%22/><text x=%2250%22 y=%2266%22 font-size=%2252%22 fill=%22white%22 text-anchor=%22middle%22 font-family=%22Georgia,serif%22 font-weight=%22bold%22>M</text></svg>">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .filter-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-bottom: 2.5rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1rem;
+    }
+    .filter-btn {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      padding: 0.4rem 0.85rem;
+      border: 1px solid var(--border);
+      background: var(--bg-card);
+      color: var(--ink-secondary);
+      border-radius: var(--radius-xs);
+      transition: all var(--dur-fast) var(--ease);
+    }
+    .filter-btn:hover {
+      border-color: var(--border-strong);
+      color: var(--ink);
+    }
+    .filter-btn.active {
+      background: var(--ink);
+      color: var(--bg);
+      border-color: var(--ink);
+    }
+    .project-card-hidden {
+      display: none !important;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-notice-bar">
+    <div class="container top-notice-inner">
+      <div class="top-notice-group">
+        <span class="status-beacon" aria-hidden="true"></span>
+        <span>Open to Opportunities · Internships &amp; Collaborations</span>
+      </div>
+      <div class="top-notice-group">
+        <span>Kathmandu, Nepal (27.7172° N, 85.3240° E)</span>
+        <span>·</span>
+        <span>Tribhuvan University '27</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation Bar -->
+  <header class="site-nav">
+    <div class="container site-nav-inner">
+      <a href="index.html" class="brand-mark" aria-label="Manil Ghimire Homepage">
+        <span class="brand-name">Manil Ghimire</span>
+        <span class="brand-title">Computer Engineering · TU</span>
+      </a>
+
+      <!-- Desktop Links -->
+      <nav class="nav-links" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="projects.html" class="nav-link active">Projects</a>
+        <a href="index.html#experience" class="nav-link">Experience</a>
+        <a href="index.html#education" class="nav-link">Education</a>
+        <a href="skills.html" class="nav-link">Skills</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" aria-label="Toggle visual theme" title="Toggle theme"></button>
+        <button class="burger-btn" aria-label="Open navigation menu" aria-expanded="false">
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-panel" aria-label="Mobile Navigation Menu">
+    <a href="index.html" class="mobile-link">Home</a>
+    <a href="about.html" class="mobile-link">About</a>
+    <a href="projects.html" class="mobile-link">Projects</a>
+    <a href="index.html#experience" class="mobile-link">Experience</a>
+    <a href="index.html#education" class="mobile-link">Education</a>
+    <a href="skills.html" class="mobile-link">Skills</a>
+    <a href="contact.html" class="mobile-link">Contact</a>
+
+    <div class="mobile-nav-meta">
+      <span>Kathmandu, Nepal</span>
+      <span>mon.neyl108@gmail.com</span>
+      <span>+977-9843896446</span>
+    </div>
+  </div>
+
+  <main>
+    <!-- Page Header -->
+    <section class="section" style="padding-top: clamp(2.5rem, 5vw, 4.5rem); padding-bottom: 2rem;">
+      <div class="container">
+        <span class="section-number" style="display:block; margin-bottom: 0.75rem;">02 // REPOSITORY &amp; BUILDS</span>
+        <h1 style="font-family:var(--font-serif); font-size:clamp(2.5rem, 5vw, 3.85rem); font-weight:400; line-height:1.1; margin-bottom:1.25rem;">
+          Selected Works &amp; Technical Systems
+        </h1>
+        <p style="font-size:1.15rem; color:var(--ink-secondary); max-width:65ch; line-height:1.7;">
+          A documented record of applications built during my Computer Engineering studies—ranging from team-engineered real-time multiplayer systems to applied generative AI tools.
+        </p>
+
+        <!-- Filters -->
+        <div class="filter-tabs" style="margin-top:2.5rem;">
+          <button class="filter-btn active" data-filter="all">All Builds (06)</button>
+          <button class="filter-btn" data-filter="team">Team Projects (01)</button>
+          <button class="filter-btn" data-filter="ai">AI &amp; Machine Learning (04)</button>
+          <button class="filter-btn" data-filter="web">Full-Stack &amp; Web (02)</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Catalog -->
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <div class="projects-container">
+
+          <!-- PROJECT 01: QUIZ ROYALE -->
+          <article class="project-lead-feature project-item" data-category="team web" aria-labelledby="proj-qr-heading">
+            <div class="project-meta-strip">
+              <span class="project-index">PROJECT 01 // TEAM SHOWCASE</span>
+              <span class="project-type-tag">Team Project (Team of 4) · Real-Time Web Application</span>
+              <span style="color:var(--ink-muted);">Academic Minor Project</span>
+            </div>
+
+            <div class="project-lead-content">
+              <div class="project-lead-text">
+                <h2 id="proj-qr-heading" style="font-family:var(--font-serif); font-size:2.5rem; font-weight:400; color:var(--ink); margin-bottom:0.5rem;">
+                  Quiz Royale
+                </h2>
+                <p class="project-subtitle">Real-Time Two-Player Quiz Application</p>
+
+                <p class="project-description">
+                  A real-time multiplayer quiz application featuring AI-assisted question classification, genre matching, and competitive gameplay. Built collaboratively with a team of four to solve the challenges of synchronized low-latency game rooms and automated content classification.
+                </p>
+
+                <p class="project-contributions-title">Key Contributions by Manil:</p>
+                <ul class="project-contributions-list">
+                  <li>Developed core backend logic for question handling, scoring algorithms, and matchmaking in Node.js and Express.</li>
+                  <li>Implemented real-time bidirectional player synchronization via WebSockets (Socket.io).</li>
+                  <li>Collaborated closely with teammates on end-to-end frontend and backend integration.</li>
+                  <li>Connected the backend to Python ML microservices for automated question genre and difficulty prediction.</li>
+                </ul>
+
+                <p class="project-contributions-title">Verified Technologies:</p>
+                <div class="project-tech-spec">
+                  <span class="tech-spec-item">Node.js</span>
+                  <span class="tech-spec-item">Express</span>
+                  <span class="tech-spec-item">Socket.io</span>
+                  <span class="tech-spec-item">MongoDB / Mongoose</span>
+                  <span class="tech-spec-item">Python</span>
+                  <span class="tech-spec-item">FastAPI</span>
+                  <span class="tech-spec-item">Docker</span>
+                </div>
+
+                <div class="project-actions-row">
+                  <a href="https://github.com/money-ll" target="_blank" rel="noopener" class="btn-editorial-primary">
+                    GitHub Repository
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+                  </a>
+                  <a href="contact.html" class="btn-editorial-secondary">Inquire About This Build</a>
+                </div>
+              </div>
+
+              <!-- Architecture Visual -->
+              <div class="project-diagram-box">
+                <div class="diagram-header">
+                  <span>Architecture Schematic</span>
+                  <span>Two-Player Real-Time Flow</span>
+                </div>
+                <div class="diagram-flow">
+                  <div class="diagram-node">
+                    <div>
+                      <strong>Client A (Host)</strong>
+                      <div class="diagram-node-desc">Player Matchmaking / Answer Buzzer</div>
+                    </div>
+                    <span style="color:#10B981;">Online</span>
+                  </div>
+                  <div class="diagram-arrow">↕ Socket.io Event Stream</div>
+                  <div class="diagram-node" style="border-color:var(--accent);">
+                    <div>
+                      <strong>Express Server + Socket Engine</strong>
+                      <div class="diagram-node-desc">Authoritative Room State · Score Calculation</div>
+                    </div>
+                    <span style="color:var(--accent);">Node Server</span>
+                  </div>
+                  <div class="diagram-arrow">↕ HTTP REST Interconnect</div>
+                  <div class="diagram-node">
+                    <div>
+                      <strong>ML Question Classification</strong>
+                      <div class="diagram-node-desc">Genre Tagging &amp; Difficulty Scorer</div>
+                    </div>
+                    <span>Python Service</span>
+                  </div>
+                  <div class="diagram-arrow">↕ Mongoose Driver</div>
+                  <div class="diagram-node">
+                    <div>
+                      <strong>MongoDB Store</strong>
+                      <div class="diagram-node-desc">Verified Question Bank &amp; Player Records</div>
+                    </div>
+                    <span>Database</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- EDITORIAL GRID (5 ADDITIONAL PROJECTS) -->
+          <div class="projects-editorial-grid">
+
+            <!-- PROJECT 02: RAG CHATBOT -->
+            <article class="project-specimen-card project-item" data-category="ai" aria-labelledby="p-rag">
+              <div class="project-card-top">
+                <span class="project-card-category">PROJECT 02 // PERSONAL PROJECT</span>
+                <h3 id="p-rag" style="font-family:var(--font-serif); font-size:1.75rem; font-weight:500; color:var(--ink); margin-bottom:0.4rem;">
+                  RAG-Based Chatbot
+                </h3>
+                <p class="project-card-desc">
+                  A Retrieval-Augmented Generation chatbot that retrieves relevant information from a knowledge base to generate contextually grounded, hallucination-resistant responses.
+                </p>
+
+                <p class="project-contributions-title">Important Features &amp; Contributions:</p>
+                <ul class="project-card-features">
+                  <li>Implemented document retrieval with overlap-aware text chunking.</li>
+                  <li>Generated local embeddings using <code>all-MiniLM-L6-v2</code> for zero-cost ingestion.</li>
+                  <li>Integrated MongoDB Atlas Vector Search ($vectorSearch) with scoped session IDs.</li>
+                  <li>Connected Llama 3.3 70B via Groq with grounded prompting for accurate source citations.</li>
+                </ul>
+              </div>
+
+              <div class="project-card-bottom">
+                <div class="project-tech-spec">
+                  <span class="tech-spec-item">Python</span>
+                  <span class="tech-spec-item">FastAPI</span>
+                  <span class="tech-spec-item">MongoDB Atlas Vector Search</span>
+                  <span class="tech-spec-item">Sentence-Transformers</span>
+                  <span class="tech-spec-item">Groq (Llama 3.3)</span>
+                  <span class="tech-spec-item">Streamlit</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/money-ll" target="_blank" rel="noopener">GitHub ↗</a>
+                  <a href="contact.html">Inquire Details →</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- PROJECT 03: OFFLINE CHATBOT -->
+            <article class="project-specimen-card project-item" data-category="ai" aria-labelledby="p-offline">
+              <div class="project-card-top">
+                <span class="project-card-category">PROJECT 03 // PERSONAL PROJECT</span>
+                <h3 id="p-offline" style="font-family:var(--font-serif); font-size:1.75rem; font-weight:500; color:var(--ink); margin-bottom:0.4rem;">
+                  Offline Chatbot
+                </h3>
+                <p class="project-card-desc">
+                  A locally hosted chatbot that can respond to user queries without requiring an internet connection, ensuring complete data confidentiality and zero external API dependencies.
+                </p>
+
+                <p class="project-contributions-title">Important Features &amp; Contributions:</p>
+                <ul class="project-card-features">
+                  <li>Implemented local language model inference using quantized model architectures.</li>
+                  <li>Optimized model configuration for limited consumer hardware constraints.</li>
+                  <li>Focused on balancing response quality, coherence, and runtime latency.</li>
+                  <li>Engineered self-contained execution environment.</li>
+                </ul>
+              </div>
+
+              <div class="project-card-bottom">
+                <div class="project-tech-spec">
+                  <span class="tech-spec-item">Python</span>
+                  <span class="tech-spec-item">Local LLM Inference</span>
+                  <span class="tech-spec-item">GGUF Quantization</span>
+                  <span class="tech-spec-item">System Optimization</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/money-ll" target="_blank" rel="noopener">GitHub ↗</a>
+                  <a href="contact.html">Inquire Details →</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- PROJECT 04: SPEECH CONVERTER -->
+            <article class="project-specimen-card project-item" data-category="ai" aria-labelledby="p-speech">
+              <div class="project-card-top">
+                <span class="project-card-category">PROJECT 04 // PERSONAL PROJECT</span>
+                <h3 id="p-speech" style="font-family:var(--font-serif); font-size:1.75rem; font-weight:500; color:var(--ink); margin-bottom:0.4rem;">
+                  Text-to-Voice &amp; Voice-to-Text Converter
+                </h3>
+                <p class="project-card-desc">
+                  A two-way speech application that converts written text into natural-sounding speech and transcribes spoken audio back into text in a unified workspace.
+                </p>
+
+                <p class="project-contributions-title">Important Features &amp; Contributions:</p>
+                <ul class="project-card-features">
+                  <li>Integrated speech synthesis (TTS) with configurable cadence, rate, and pitch inflection.</li>
+                  <li>Integrated speech recognition (STT) for audio transcription and live mic dictation.</li>
+                  <li>Built a unified interface supporting both conversion directions seamlessly.</li>
+                  <li>Implemented audio error handling and microphone permission workflows.</li>
+                </ul>
+              </div>
+
+              <div class="project-card-bottom">
+                <div class="project-tech-spec">
+                  <span class="tech-spec-item">Python</span>
+                  <span class="tech-spec-item">SpeechRecognition</span>
+                  <span class="tech-spec-item">pyttsx3</span>
+                  <span class="tech-spec-item">Web Speech API</span>
+                  <span class="tech-spec-item">JavaScript</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/money-ll" target="_blank" rel="noopener">GitHub ↗</a>
+                  <a href="contact.html">Inquire Details →</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- PROJECT 05: PROMPT-TO-IMAGE -->
+            <article class="project-specimen-card project-item" data-category="ai" aria-labelledby="p-image">
+              <div class="project-card-top">
+                <span class="project-card-category">PROJECT 05 // PERSONAL PROJECT</span>
+                <h3 id="p-image" style="font-family:var(--font-serif); font-size:1.75rem; font-weight:500; color:var(--ink); margin-bottom:0.4rem;">
+                  Prompt-to-Image Generator
+                </h3>
+                <p class="project-card-desc">
+                  An application that generates images from natural-language text prompts using an AI image-generation model, focusing on prompt usability and rapid output iteration.
+                </p>
+
+                <p class="project-contributions-title">Important Features &amp; Contributions:</p>
+                <ul class="project-card-features">
+                  <li>Implemented prompt-based image generation via modern diffusion APIs.</li>
+                  <li>Designed the interface for fast prompt input, parameter adjustments, and image output.</li>
+                  <li>Integrated preview rendering, prompt history caching, and high-res export options.</li>
+                  <li>Handled generation state transitions and network error fallbacks.</li>
+                </ul>
+              </div>
+
+              <div class="project-card-bottom">
+                <div class="project-tech-spec">
+                  <span class="tech-spec-item">Python</span>
+                  <span class="tech-spec-item">Diffusion Models</span>
+                  <span class="tech-spec-item">Generative AI</span>
+                  <span class="tech-spec-item">JavaScript UI</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/money-ll" target="_blank" rel="noopener">GitHub ↗</a>
+                  <a href="contact.html">Inquire Details →</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- PROJECT 06: PORTFOLIO WEBSITE -->
+            <article class="project-specimen-card project-item" data-category="web" style="grid-column: 1 / -1;" aria-labelledby="p-portfolio">
+              <div class="project-card-top">
+                <span class="project-card-category">PROJECT 06 // PERSONAL PROJECT</span>
+                <h3 id="p-portfolio" style="font-family:var(--font-serif); font-size:1.75rem; font-weight:500; color:var(--ink); margin-bottom:0.4rem;">
+                  Personal Developer Portfolio
+                </h3>
+                <p class="project-card-desc">
+                  A responsive personal website developed to showcase my projects, technical interests, and experience. Built from the ground up without bloated frameworks or generic AI templates.
+                </p>
+
+                <p class="project-contributions-title">Important Features &amp; Contributions:</p>
+                <ul class="project-card-features">
+                  <li>Designed with Swiss graphic design and editorial typography principles.</li>
+                  <li>Authored entirely in semantic HTML5, modern CSS tokens, and vanilla JavaScript.</li>
+                  <li>Light/Dark mode with persistence and reduced motion accessibility.</li>
+                  <li>Zero build step, ensuring immediate loading speed and long-term maintainability.</li>
+                </ul>
+              </div>
+
+              <div class="project-card-bottom">
+                <div class="project-tech-spec">
+                  <span class="tech-spec-item">HTML5</span>
+                  <span class="tech-spec-item">CSS3 (Grid/Flexbox)</span>
+                  <span class="tech-spec-item">Vanilla JavaScript</span>
+                  <span class="tech-spec-item">Editorial Typography</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/money-ll/portfolio" target="_blank" rel="noopener">
+                    Repository (github.com/money-ll/portfolio) ↗
+                  </a>
+                  <span style="font-family:var(--font-mono); font-size:0.75rem; color:var(--accent);">Active Site</span>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to action -->
+    <section class="section" style="text-align:center; padding-block: 4rem;">
+      <div class="container">
+        <h2 style="font-family:var(--font-serif); font-size:clamp(1.85rem, 3.5vw, 2.75rem); font-weight:400; margin-bottom:1rem;">
+          Interested in collaborating or discussing a technical project?
+        </h2>
+        <p style="font-size:1.05rem; color:var(--ink-secondary); max-width:50ch; margin-inline:auto; margin-bottom:2rem;">
+          I'm always glad to talk about distributed systems, applied AI, or potential engineering internship opportunities.
+        </p>
+        <a href="contact.html" class="btn-editorial-primary">Get in Touch →</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>Manil Ghimire</strong> · Kathmandu, Nepal
+      </div>
+      <div class="footer-social-row">
+        <a href="https://github.com/money-ll" target="_blank" rel="noopener" class="footer-social-link">GitHub</a>
+        <a href="https://linkedin.com/in/manilghimire" target="_blank" rel="noopener" class="footer-social-link">LinkedIn</a>
+        <a href="mailto:mon.neyl108@gmail.com" class="footer-social-link">Email</a>
+        <a href="assets/Manil_Ghimire_Resume.pdf" target="_blank" rel="noopener" class="footer-social-link">Resume (PDF)</a>
+      </div>
+      <div>
+        &copy; <span class="dynamic-year">2026</span> Manil Ghimire. Handcrafted.
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    // Tab filtering logic
+    document.addEventListener('DOMContentLoaded', function () {
+      var filterBtns = document.querySelectorAll('.filter-btn');
+      var projectCards = document.querySelectorAll('.project-item');
+
+      filterBtns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var targetFilter = btn.getAttribute('data-filter');
+
+          filterBtns.forEach(function (b) { b.classList.remove('active'); });
+          btn.classList.add('active');
+
+          projectCards.forEach(function (card) {
+            var categories = card.getAttribute('data-category') || '';
+            if (targetFilter === 'all' || categories.indexOf(targetFilter) !== -1) {
+              card.classList.remove('project-card-hidden');
+            } else {
+              card.classList.add('project-card-hidden');
+            }
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>
